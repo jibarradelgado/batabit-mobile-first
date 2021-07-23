@@ -148,16 +148,22 @@ main {
   color: #757575;
 }
 
+.main-tables-container {
+  display: flex;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  gap: 30px;
+}
 .main-fee-table,
 .main-currency-table {
   width: 70%;
+  scroll-snap-align: center;
   min-width: 235px;
   max-width: 500px;
   height: 360px;
-  margin: 0 auto;
   font-family: 'Inter', sans-serif;
 }
-
 .main-fee-table .fee-table--title,
 .main-currency-table .currency-table--title {
   margin-bottom: 15px;
@@ -168,11 +174,9 @@ main {
   text-align: left;
   margin-left: 20px;
 }
-
 .main-fee-table .fee-table--title {
   color: var(--secondary-blue);
 }
-
 .fee-table--container,
 .currency-table--container {
   width: 90%;
